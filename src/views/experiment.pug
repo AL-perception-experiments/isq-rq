@@ -1,0 +1,30 @@
+html
+    body(id="body")
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .center {text-align: center;}
+            .centered {text-align: center; margin-top: 20%;}
+            .centeredProgress {width:100%; margin-top: 8%;}
+            .hidden {display: none}
+        div(class="center")
+            span #[b „F“] = #[u keine rhetorische Frage]; #[b „J“] = #[u rhetorische Frage]
+            br
+            span(id="time" style="font-size: 40pt")
+        h1(class="centered" id="warning" style="font-size: 20pt;") Bitte geben Sie Ihre Antwort, indem Sie "F" oder "J" drücken.
+        div(class="centered" id="beginButton" )
+            button(type="submit" onclick='startPlay()') Beginnen
+        div(id="forAudio")
+            h1(class="centered" id="cross" style="font-size: 50pt") +
+            progress(class="centeredProgress" id="progress" value="0" max="92")
+            audio(id="audio-experiment" src=src)
+
+            //show timer with 3 mins!
+
+        div(class="centered" id="forPause" style="display:none;")
+            p Kurze Pause (maximal 3 Minuten). Sie können aber vorher jederzeit "Weiter" klicken um fortzufahren.
+            br
+            button(type="submit" onclick="continueExperiment()") Weiter
+    script.
+        window.history.forward()
+    script(src='pipeline.js')

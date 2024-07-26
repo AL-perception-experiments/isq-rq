@@ -1,0 +1,16 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: left}
+            #container p {text-align: left}
+        h1(class="centered") Erklärung
+        div(id="container")
+            h4 Eine rhetorische Frage ist eine Frage, die keine Antwort verlangt, da diese bereits bekannt bzw. offensichtlich ist (oder aus Sprechersicht sein sollte).
+            p Beispiel: "Ist denn heute schon Weihnachten?"
+            form(class="centered" method="get" action="/test-round")
+                button(type="submit") Weiter
+    script.
+        window.history.forward()

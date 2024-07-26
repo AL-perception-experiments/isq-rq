@@ -1,0 +1,17 @@
+html
+    body
+        style.
+            body {font-size: 16pt}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: left}
+            #container p {text-align: center}
+        h1(class="centered") Gleich beginnt die Studie
+        div(id="container" class="centered")
+            p Bitte hören Sie die Aufnahme bis zum Ende an, bevor Sie entscheiden.
+            p Versuchen Sie so schnell und intuitiv wie möglich zu entscheiden.
+            p Stören Sie sich bitte nicht an dem etwas metallischen Klang der Stimme. Die Stimuli sind computergeneriert. Das Abspielen der Stimuli könnte leicht verzögert sein.
+            form(class="centered" method="get" action="/experiment")
+                button(type="submit") Starten
+    script.
+        window.history.forward()

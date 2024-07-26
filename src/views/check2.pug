@@ -1,0 +1,16 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: center}
+            #container p {text-align: left}
+        h1(class="centered") Ist Ihnen der Ablauf klar?
+        div(id="container")
+            form(method="get" action="/task2")
+                button(type="submit") Ja
+            form(method="get" action="/test-round")
+                button(type="submit") Nein
+    script.
+        window.history.forward()

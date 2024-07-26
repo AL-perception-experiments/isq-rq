@@ -1,0 +1,54 @@
+html
+    body
+        style.
+            body {font-size: 16pt}
+            button, select {font-size: 16pt;}
+            select{font-family: Times New Roman}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: center}
+            #container p {text-align: left}
+        h1(class="centered") Fragebogen
+        div(id="container")
+            form(method="POST" action="/check" onsubmit="return checkQuestionnaire()")
+                p Alter:&nbsp
+                    input(type="text" min=1 max=100 name="age" id="age" placeholder="")
+                p Geschlecht:&nbsp
+                    select(name='gender', id='gender')
+                        each val in ['', 'männlich' , 'weiblich' , 'divers', 'keine Angabe']
+                            option=val
+                p In welchem Bundesland haben Sie den größten Teil Ihres Lebens verbracht?&nbsp
+                    select(name='state', id='state')
+                        each val in ['', 'Baden Württemberg', 'Bayern', 'Berlin', 'Brandenburg', 'Bremen', 'Hamburg', 'Hessen','Mecklenburg-Vorpommern','Niedersachsen','Nordrhein Westfalen','Rheinland-Pfalz','Saarland','Sachsen','Sachsen-Anhalt','Schleswig-Holstein','Thüringen']
+                            option=val
+                p Können Sie Dialekt sprechen (gemeint ist nicht: dialektale/ regionale Färbung im Hochdeutschen)?&nbsp
+                    select(name='dialect', id='dialect')
+                        each val in ['', 'Ja', 'Nein']
+                            option=val
+                p Verwenden Sie Dialekt im Alltag?&nbsp
+                    select(name='dialect2', id='dialect2')
+                        each val in ['', 'Ja', 'Nein']
+                            option=val
+                p(style="display: none" id="pwhichDialect") Welchen Dialekt sprechen Sie?&nbsp
+                    input(type="text" name="whichDialect" id="whichDialect" placeholder="")
+                p Haben Sie eine weitere Sprache vor dem 6. Lebensjahr erlernt? (sprechen Ihre Eltern/Großeltern eine andere Sprache?)&nbsp
+                    select(name='otherLanguages', id='otherLanguages')
+                        each val in ['', 'Ja', 'Nein']
+                            option=val
+                p(style="display: none" id="pwhichLanguages") Welche Sprache haben Sie vor dem 6. Lebensjahr erlernt?&nbsp
+                    input(type="text" name="whichLanguages" id="whichLanguages" placeholder="")
+                p Spielen Sie ein Instrument oder singen Sie im Chor?&nbsp
+                    select(name='music', id='music')
+                        each val in ['', 'Ja', 'Nein']
+                            option=val
+                p Haben Sie einen Kurs zu Intonation oder gesprochenen Sprache belegt?&nbsp
+                    select(name='studies', id='studies')
+                        each val in ['', 'Ja', 'Nein']
+                            option=val
+                p Sind Sie Links- oder Rechtshänder:in?&nbsp
+                    select(name='hand', id='hand')
+                        each val in ['', 'Linkshänder:in', 'Rechtshänder:in']
+                            option=val
+                button(type="submit") Weiter
+                script(src='check.js')
+    script.
+        window.history.forward()

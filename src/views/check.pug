@@ -1,0 +1,16 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; }
+        h1(class="centered") Schließen Sie nun bitte Ihren Kopfhörer an.
+        div(id="container" class="centered")
+            form(method="get" action="/task")
+                p Ist Ihr Kopfhörer bereit?
+                p Es könnte sein, dass Sie der Website erlauben müssen die Audiodateien abzuspielen.
+                p Ab jetzt werden Sie nicht mehr auf die vorherige Seite zurückklicken können.
+                button(type="submit") Weiter
+        script.
+            window.history.forward()

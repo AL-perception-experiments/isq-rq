@@ -1,0 +1,22 @@
+html
+    body(id="body")
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center; margin-top: 20%;}
+            .centeredp {text-align: center; margin-top: 20px;}
+            .centeredProgress {width:100%; margin-top: 6%}
+            .hidden {display: none}
+        p(class="centeredp")
+            span Drücken Sie die #[b „F“] Taste, wenn Sie denken, dass die Frage #[u nicht rhetorisch] ist
+            br
+            span und die #[b „J“] Taste, wenn Sie der Meinung sind, dass die Frage #[u rhetorisch] ist.
+        div(class="centered" id="beginButtonTest" )
+            button(type="submit" onclick='startPlayTest()') Beginnen
+        h1(class="centered" id="warningTest" style="font-size: 20pt;") Bitte geben Sie Ihre Antwort indem Sie "F" oder "J" drücken.
+        h1(class="centered" id="cross" style="font-size: 50pt") +
+        progress(class="centeredProgress" id="progress" value="0" max="3")
+        audio(id="audio" src=src)
+    script(src='test-stimuli.js')
+    script.
+        window.history.forward()

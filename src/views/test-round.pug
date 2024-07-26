@@ -1,0 +1,18 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: left}
+            #container p {text-align: justify;}
+        h1(class="centered") Testphase
+        div(id="container")
+            p Es folgen nun drei Übungsbeispiele, bei denen Sie auch nochmals die Lautstärke der Kopfhörer richtig einstellen können. Entscheiden Sie hier einfach mit dem Drücken der Tasten #[b „F“] (keine rhetorische Frage) und #[b „J“] (rhetorische Frage).
+        div(class="centered")
+            img(src="logos/tastatur-white.jpg" width="500px")
+        br
+        form(class="centered" method="get" action="/test-stimuli")
+             button(type="submit") Weiter
+    script.
+        window.history.forward()

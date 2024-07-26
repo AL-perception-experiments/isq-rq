@@ -1,0 +1,51 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            div{align-content: center;}
+            .colored {color: darkcyan}
+            .centered {text-align: center;}
+            #leitung {margin: auto; width: 60%; border: 1px solid darkcyan; padding: 10px; text-align: center}
+            #leitung p {text-align: justify;}
+        h1(class="centered") Einverständniserklärung
+        div
+
+            h3 Voraussichtl. Laufzeit: 06/2021 – 03/2022
+
+            p Diese Einverständniserklärung vermittelt die grundlegende Vorstellung über den Inhalt und Ablauf der Studie. Bitte stellen Sie uns Fragen, wenn Sie an einer bestimmten Stelle weitere Auskünfte möchten. Auf Wunsch erhalten Sie eine Kopie dieses Schreibens.
+
+
+            h3 ZIEL DER STUDIE
+            p Diese Studie ist Teil eines Forschungsprojekts zur Prosodie rhetorischer Fragen. Ziel ist es, eine prosodische Grammatik zu entwickeln. Hierfür untersuchen wir, welche Kombinationen von prosodischen Merkmalen zu einer wohlgeformten rhetorischen Frage führen.
+            p Weitere Informationen zu unserer Forschung erhalten Sie unter:
+                a(href="https://typo.uni-konstanz.de/questionsInterfaces/index.php/p6-description/" target="_blank") https://typo.uni-konstanz.de/questionsInterfaces/index.php/p6-description/
+
+            h3 ABLAUF
+            p Wenn Sie sich zur Teilnahme entscheiden, werden wir Sie bitten, einen Fragebogen auszufüllen, der uns Aufschluss über Ihren Sprachenhintergrund und zusätzliche demographische Informationen gibt.
+            p Außerdem werden Sie an unserer Wahrnehmungsstudie teilnehmen.
+            p Während der Studie sitzen Sie an Ihrem eigenen Computer und hören sich verschiedene Äußerungen an. Zwischen den einzelnen Äußerungen erscheint in der Bildschirmmitte ein Kreuz. Nach dem Anhören jeder Äußerung entscheiden Sie per Tastendruck, ob die gehörte Äußerung als rhetorische Frage gemeint ist oder nicht. Als experimentelle Daten werden also die jeweils von Ihnen gewählte Taste sowie die Reaktionszeit (wie schnell sie die entsprechende Taste gedrückt haben) erhoben. Die Studie dauert insgesamt ungefähr 10-15 Minuten.
+
+            h3 FREIWILLIGE TEILNAHME
+            p Ihre Teilnahme an dieser Studie ist vollkommen freiwillig. Sie können den Test jederzeit abbrechen, ohne dass dies negative Auswirkungen für Sie hat.
+
+            h3 RISIKEN & NUTZEN
+            p Die Teilnahme an dieser Studie ist vollkommen ungefährlich und birgt keinerlei Risiken. Am Ende des Experiments haben sie die Möglichkeit an einem Gewinnspiel teilzunehmen. Hierfür benötigen wir Ihre E-Mail-Adresse. Die Angabe der E-Mail-Adresse dient ausschließlich der Teilnahme am Gewinnspiel und wird nicht für andere Zwecke verwendet.
+
+            p Falls Sie weitere Fragen haben, können Sie Prof. Dr. Bettina Braun, Prof. Dr. Nicole Dehé oder ihre Mitarbeiter:innen gerne per Mail kontaktieren.
+
+            h3 EINVERSTÄNDNIS
+            form(action="/accept" method="POST")
+                p Ich wurde über den Ablauf der Studie aufgeklärt und meine Fragen wurden vollständig beantwortet. Ich habe die Datenschutzerklärung für Perzeptionsstudien des Phonlabs erhalten und zur Kenntnis genommen. Ich stimme der Teilnahme an dieser Studie und der damit verbundenen Datenverarbeitung zu.
+                p(style="text-align:center; font-size: 22pt") #[b „Ja“]
+                    input(type="checkbox" required id="check")
+
+            h4 Ihr Einverständnis zur Teilnahme an der Studie „MONSTER“ geben Sie uns, indem Sie unten auf „Zustimmen und Fortfahren“ klicken.
+            p Dieses Einverständnis können Sie jederzeit nach Ihrer Teilnahme und ohne Angabe von Gründen widerrufen.
+            form(method="get" action="/questionnaire" onsubmit="return check()")
+                button(type="submit") Zustimmen und Fortfahren
+            form(method="get" action="/stop")
+                button(type="submit") Ich stimme nicht zu
+            script(src='check.js')
+    script.
+        window.history.forward()

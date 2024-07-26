@@ -1,0 +1,30 @@
+html
+    body
+        style.
+            body {font-size: 16pt; line-height: 1.6;}
+            button {font-size: 16pt;}
+            .centered {text-align: center}
+            .center{margin-left: auto}
+            #container {margin: auto; width: 60%; padding: 10px; text-align: left}
+            #container p {text-align: justify;}
+            .boldFont {font-weight: bold!important;}
+        h1(class="centered") Aufgabenstellung
+        div(id="container")
+            p(class="centered") Bitte drücken Sie nun den Play-Button.
+            form(class="centered" method="get" action="/explanation")
+                audio(id="audio-experiment" controls='', src="examples/Aufgabenstellung_6_norm.wav", autoplay=false)
+                br
+                br
+            p Ihnen wird nun die Aufgabenstellung vorgelesen. Bitte nutzen Sie diese Zeit auch, um eine für Sie angenehme Lautstärke an Ihrem Computer einzustellen.
+            p Im Folgenden werden Ihnen Fragesätze präsentiert. Ihre Aufgabe ist es zu entscheiden, ob die präsentierte Frage eine rhetorische Frage ist oder nicht. Sind Sie der Meinung, dass die Frage rhetorisch ist, dann drücken Sie auf Ihrer Tastatur #[b „J“]. Halten Sie die Frage nicht für rhetorisch, dann drücken Sie #[b „F“].
+            p Bitte hören Sie die Aufnahme bis zum Ende an, bevor Sie entscheiden. Sollten Sie versehentlich zu früh gedrückt haben und darum nicht zur nächsten Seite gelangen, drücken Sie die Taste noch einmal um fortzufahren.
+            p Versuchen Sie so schnell und intuitiv wie möglich zu entscheiden.
+            p Stören Sie sich bitte nicht an dem etwas metallischen Klang der Stimme. Die Stimuli sind computergeneriert. Das Abspielen der Stimuli könnte leicht verzögert sein.
+            span(class="boldFont") Hinweis:&nbsp
+            span Falls Sie die neuste Safari-Version benutzen, kann es zu Problemen beim automatischen Abspielen der Stimuli kommen. Sie können zum Abspielen der Stimuli unter "Safari>Einstellungen" das Auto-Play für die Website (oder Websites im Plural) erlauben. Bitte entschuldigen Sie die Umstände.
+            div(class="centered")
+                img(src="logos/screen.png" width="80%")
+        form(class="centered" method="get" action="/explanation")
+                button(type="submit") Weiter
+    script.
+        window.history.forward()
